@@ -1,16 +1,11 @@
 # Para utilizar bash es necesario cambiar el $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-
-#configuracion para el nvm -> controlador de versiones de node
+#inicialización del controlador de version de node (Lo comento porque hace lenta la terminal)
 #source /usr/share/nvm/init-nvm.sh
 
 # Para utilizar zsh es necesario: 
 export ZSH=/usr/share/oh-my-zsh/
-
-
-# Para definir un tema de zsh:
- ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Plugins
 plugins=(git)
@@ -39,8 +34,8 @@ export HISTCONTROL=ignoreboth:erasedups
 
 # Make nano the default editor
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='nvim'
+export VISUAL='nvim'
 
 #PS1='[\u@\h \W]\$ '
 
@@ -90,6 +85,7 @@ alias srn="sudo reboot now"
 
 #Configuracion personal -> s4vitar
 alias cat="bat"
+alias icat="kitty +kitten icat"
 
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
@@ -139,4 +135,8 @@ source /usr/share/zsh-sudo/sudo.plugin.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 
+#Configuracion de la kitty
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
