@@ -2,4 +2,4 @@
 
 Configuración personal del zshrc
 
-> Esta contribución esta basada en la distro de ArcoLinux Qtile
+> Esta contribución esta basada en la distro de ArcoLinux
