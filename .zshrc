@@ -68,6 +68,10 @@ alias df='df -h'
 #free
 alias free="free -mt"
 
+#configuracion angel
+alias mongodb="mongod --port 27017 --dbpath /home/angel/database"
+
+
 #userlist
 alias userlist="cut -d: -f1 /etc/passwd | sort"
 
@@ -86,6 +90,8 @@ alias srn="sudo reboot now"
 #Configuracion personal -> s4vitar
 alias cat="bat"
 alias icat="kitty +kitten icat"
+alias ls="lsd"
+
 
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
@@ -115,15 +121,13 @@ ex ()
 }
 
 #create a file called .zshrc-personal and put all your personal aliases
-#in there. They will not be overwritten by skel.
-
 [[ -f ~/.zshrc-personal ]] && . ~/.zshrc-personal
 
 # reporting tools - install when not installed
 neofetch
 
 #inicialización de prompt starship
-#eval "$(starship init zsh)"
+eval "$(starship init zsh)"
 
 #inicialización de fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -132,10 +136,6 @@ neofetch
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh-sudo/sudo.plugin.zsh
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 #Configuracion de la kitty
 bindkey "^[[1;3C" forward-word
